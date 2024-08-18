@@ -26,7 +26,21 @@ const Home = () => {
         <Navbars className="relative " />
       </div>
 
-      <section className="container  mx-auto py-8 bg-white dark:bg-gray-900 lg:py-24">
+      <section className="container  mx-auto py-8 bg-white dark:bg-gray-900 lg:py-24 relative">
+
+        <div class="absolute top-0 left-0 w-full h-auto overflow-hidden opacity-10">
+          
+          <img src="https://cdn.devdojo.com/assets/img/bg-patterns.svg" class="object-cover w-full h-auto" />
+            <span class="absolute inset-0 block w-full h-full bg-gradient-to-b from-transparent to-white"></span>
+        </div>
+        <div class="max-w-3xl px-6 py-24 mx-auto text-left md:text-center sm:py-32 xl:px-0">
+          <img src="https://cdn.devdojo.com/images/july2021/tw-logo.png" class="w-12 h-auto mb-4 sm:w-16 md:w-20 md:mx-auto"/>
+            <h1 class="text-4xl font-black sm:text-5xl md:text-7xl">TailwindCSS Buttons</h1>
+            <p class="mt-0 text-base text-gray-500 sm:mt-2 md:mt-5 sm:text-xl md:text-2xl">A unique collection of Copy &amp; Paste TailwindCSS buttons 🙌</p>
+            {/* <div class="flex items-center justify-center w-full mt-8">
+              <a href="https://www.producthunt.com/posts/tailwindcss-buttons?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-tailwindcss-buttons" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=303177&amp;theme=light" alt="TailwindCSS Buttons - 30+ Copy &amp; Paste TailwindCSS buttons 🙌 | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54"/></a>
+            </div> */}
+        </div>
 
         <div className="mb-20 p-2">
           <div className="grid grid-cols-12 gap-4">
