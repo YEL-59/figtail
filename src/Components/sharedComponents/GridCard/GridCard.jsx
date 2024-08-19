@@ -1,42 +1,33 @@
-import React from 'react';
+
 import { FiCopy } from 'react-icons/fi';
 
-const GridCard = ({ title, imgSrc, imgAlt, buttonText, buttonStyles }) => {
-  const buttonCode = `<button className="${buttonStyles}">${buttonText}</button>`;
-
+const GridCard = ({ title, buttonHTML }) => {
   const handleCopy = () => {
-    navigator.clipboard.writeText(buttonCode);
+    navigator.clipboard.writeText(buttonHTML);
     alert('Button code copied to clipboard!');
   };
 
   return (
-    <div className="w-full">
-      <div className="h-64 bg-white rounded-lg border border-gray-100 hover:border-white dark:border-gray-800 dark:hover:border-gray-700 hover:shadow-lg dark:hover:shadow-lg-light dark:bg-gray-900">
-        <div className="bg-gray-50 dark:bg-gray-800 rounded-t-md py-2.5 px-5 flex justify-between items-center border-b border-gray-200 dark:border-gray-700">
-          <span className="text-base font-medium text-gray-900 dark:text-white">
-            {title}
-          </span>
-          <button
-            className="text-gray-500 dark:text-gray-400 hover:text-blue-500"
-            onClick={handleCopy}
-            title="Copy Button Code"
-          >
-            <FiCopy className="w-5 h-5" />
-          </button>
-        </div>
-        <div className="flex justify-center items-center h-52">
-          {/* <img
-            alt={imgAlt}
-            src={imgSrc}
-            className="hidden relative h-4/6 dark:block w-56"
-          /> */}
-          <button className={buttonStyles}>
-            {buttonText}
-          </button>
-        </div>
+    <div className="relative flex flex-col col-span-4 sm:col-span-2 lg:col-span-1 items-center justify-center bg-white w-full pt-16 pb-24 border border-gray-200 rounded-lg overflow-hidden">
+      <span className="absolute top-0 left-0 px-2 py-1 text-xs font-medium text-gray-600 lowercase border-gray-200 border-b border-r rounded-br-lg cursor-default">
+        ✨ {title}
+      </span>
+      <div className="flex items-center justify-center w-full h-full button">
+        {/* Render buttonHTML using dangerouslySetInnerHTML */}
+        <div dangerouslySetInnerHTML={{ __html: buttonHTML }} />
+      </div>
+      <div
+        onClick={handleCopy}
+        className="absolute bottom-0 flex items-center justify-center w-full py-2 font-medium text-center border-t cursor-pointer bg-gray-50 hover:bg-gray-100 text-gray-500"
+      >
+        <FiCopy className="w-5 h-5 mr-1" />
+        <span>Copy</span>
       </div>
     </div>
   );
 };
 
 export default GridCard;
+
+
+
