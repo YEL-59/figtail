@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbars from "../../sharedComponents/Navbar/navbars";
 import Footer from "../../sharedComponents/Footer/Footer";
 import GridCard from "../../sharedComponents/GridCard/GridCard";
@@ -15,6 +15,18 @@ const Home = () => {
     }
   }
   window.addEventListener("scroll", setFixed);
+
+
+
+  const [buttonData, setButtonData] = useState([]);
+
+  useEffect(() => {
+    // Fetch the JSON data
+    fetch("/simplebuttonData.json")
+      .then((response) => response.json())
+      .then((data) => setButtonData(data))
+      .catch((error) => console.error("Error fetching button data:", error));
+  }, []);
   return (
     <>
       <div
@@ -280,6 +292,218 @@ const Home = () => {
 </a>
   `}
                 />
+
+                <GridCard
+                  title="Hover Effect 9"
+                  buttonHTML={`
+<a href="#_" class="relative px-6 py-3 font-bold text-black group">
+<span class="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
+<span class="absolute inset-0 w-full h-full border-4 border-black"></span>
+<span class="relative">Button Text</span>
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 10"
+                  buttonHTML={`
+<a href="#_" class="relative rounded px-5 py-2.5 overflow-hidden group bg-green-500 relative hover:bg-gradient-to-r hover:from-green-500 hover:to-green-400 text-white hover:ring-2 hover:ring-offset-2 hover:ring-green-400 transition-all ease-out duration-300">
+<span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+<span class="relative">Button Text</span>
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 11"
+                  buttonHTML={`
+<a href="#_" class="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500">
+<span class="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+<span class="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+<span class="relative text-white">Button Text</span>
+</a>
+  `}
+                />
+
+                <GridCard
+                  title="Hover Effect 12"
+                  buttonHTML={`
+<a href="#_" class="relative px-10 py-3 font-medium text-white transition duration-300 bg-green-400 rounded-md hover:bg-green-500 ease">
+<span class="absolute bottom-0 left-0 h-full -ml-2">
+<svg viewBox="0 0 487 487" class="w-auto h-full opacity-100 object-stretch" xmlns="http://www.w3.org/2000/svg"><path d="M0 .3c67 2.1 134.1 4.3 186.3 37 52.2 32.7 89.6 95.8 112.8 150.6 23.2 54.8 32.3 101.4 61.2 149.9 28.9 48.4 77.7 98.8 126.4 149.2H0V.3z" fill="#FFF" fill-rule="nonzero" fill-opacity=".1"></path></svg>
+</span>
+<span class="absolute top-0 right-0 w-12 h-full -mr-3">
+<svg viewBox="0 0 487 487" class="object-cover w-full h-full" xmlns="http://www.w3.org/2000/svg"><path d="M487 486.7c-66.1-3.6-132.3-7.3-186.3-37s-95.9-85.3-126.2-137.2c-30.4-51.8-49.3-99.9-76.5-151.4C70.9 109.6 35.6 54.8.3 0H487v486.7z" fill="#FFF" fill-rule="nonzero" fill-opacity=".1"></path></svg>
+</span>
+<span class="relative">Button Text</span>
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 13"
+                  buttonHTML={`
+<a href="#_" class="relative px-5 py-3 overflow-hidden font-medium text-gray-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group">
+<span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
+<span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
+<span class="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+<span class="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gray-600 group-hover:h-full ease"></span>
+<span class="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
+<span class="relative transition-colors duration-300 delay-200 group-hover:text-white ease">Button Text</span>
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 14"
+                  buttonHTML={`
+<a href="#_" class="box-border relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-white transition-all duration-300 bg-indigo-600 rounded-md cursor-pointer group ring-offset-2 ring-1 ring-indigo-300 ring-offset-indigo-200 hover:ring-offset-indigo-500 ease focus:outline-none">
+<span class="absolute bottom-0 right-0 w-8 h-20 -mb-8 -mr-5 transition-all duration-300 ease-out transform rotate-45 translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+<span class="absolute top-0 left-0 w-20 h-8 -mt-1 -ml-12 transition-all duration-300 ease-out transform -rotate-45 -translate-x-1 bg-white opacity-10 group-hover:translate-x-0"></span>
+<span class="relative z-20 flex items-center text-sm">
+<svg class="relative w-5 h-5 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+Button Text
+</span>
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 15"
+                  buttonHTML={`
+<a href="#_" class="relative z-30 inline-flex items-center justify-center w-auto px-8 py-3 overflow-hidden font-bold text-gray-500 transition-all duration-500 border border-gray-200 rounded-md cursor-pointer group ease bg-gradient-to-b from-white to-gray-50 hover:from-gray-50 hover:to-white active:to-white">
+<span class="w-full h-0.5 absolute bottom-0 group-active:bg-transparent left-0 bg-gray-100"></span>
+<span class="h-full w-0.5 absolute bottom-0 group-active:bg-transparent right-0 bg-gray-100"></span>
+Button Text
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 16"
+                  buttonHTML={`
+<a href="#_" class="relative inline-block px-4 py-2 font-medium group">
+<span class="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+<span class="absolute inset-0 w-full h-full bg-white border-2 border-black group-hover:bg-black"></span>
+<span class="relative text-black group-hover:text-white">Button Text</span>
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 17"
+                  buttonHTML={`
+<a href="#_" class="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-purple-500 rounded-full shadow-md group">
+<span class="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-purple-500 group-hover:translate-x-0 ease">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+</span>
+<span class="absolute flex items-center justify-center w-full h-full text-purple-500 transition-all duration-300 transform group-hover:translate-x-full ease">Button Text</span>
+<span class="relative invisible">Button Text</span>
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 18"
+                  buttonHTML={`
+<a href="#_" class="relative inline-flex items-center justify-center inline-block p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 rounded-lg shadow-2xl group">
+<span class="absolute top-0 left-0 w-40 h-40 -mt-10 -ml-3 transition-all duration-700 bg-red-500 rounded-full blur-md ease"></span>
+<span class="absolute inset-0 w-full h-full transition duration-700 group-hover:rotate-180 ease">
+<span class="absolute bottom-0 left-0 w-24 h-24 -ml-10 bg-purple-500 rounded-full blur-md"></span>
+<span class="absolute bottom-0 right-0 w-24 h-24 -mr-10 bg-pink-500 rounded-full blur-md"></span>
+</span>
+<span class="relative text-white">Button Text</span>
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 19"
+                  buttonHTML={`
+<a href="#_" class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-red-500 rounded-xl group">
+<span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-red-700 rounded group-hover:-mr-4 group-hover:-mt-4">
+<span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+</span>
+<span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-red-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+<span class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">Button Text</span>
+</a>
+  `}
+                />
+              </div>
+              <h1 className="mt-20 mb-10 text-center border-b-4">
+                Simple Button
+              </h1>
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 xl:gap-2  p-2 lg:p-0">
+                <GridCard
+                  title="Hover Effect 20"
+                  buttonHTML={`
+<a href="#_" class="px-5 py-2.5 font-medium bg-blue-50 hover:bg-blue-100 hover:text-blue-600 text-blue-500 rounded-lg text-sm">
+Button Text
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 21"
+                  buttonHTML={`
+<a href="#_" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-blue-600 border border-blue-700 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" data-rounded="rounded-md" data-primary="blue-600" data-primary-reset="{}">
+Button Text
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 22"
+                  buttonHTML={`
+<a href="#_" class="inline-flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600">
+Button Text
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 23"
+                  buttonHTML={`
+<a href="#_" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-200 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
+Button Text
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 24"
+                  buttonHTML={`
+<a href="#_" class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none">
+Button Text
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 25"
+                  buttonHTML={`
+<a href="#_" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-indigo-100 border border-indigo-500 rounded-lg shadow-sm cursor-pointer hover:text-white bg-gradient-to-br from-purple-500 via-indigo-500 to-indigo-500">
+<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+<span class="relative">Button Text</span>
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 26"
+                  buttonHTML={`
+<a href="#_" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-white bg-indigo-600 border border-transparent rounded-full md:w-auto hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">
+Button Text
+</a>
+  `}
+                />
+                <GridCard
+                  title="Hover Effect 27"
+                  buttonHTML={`
+<a href="#_" class="inline-flex items-center justify-center w-full px-6 py-3 mb-2 text-lg text-white bg-green-500 rounded-md hover:bg-green-400 sm:w-auto sm:mb-0" data-primary="green-400" data-rounded="rounded-2xl" data-primary-reset="{}">
+Get Started
+<svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+</a>
+  `}
+                />
+              </div> */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-5 xl:gap-2 p-2 lg:p-0">
+                {buttonData.map((item, index) => (
+                  <GridCard
+                    key={index}
+                    title={item.title}
+                    imgSrc={item.imgSrc}
+                    imgAlt={item.imgAlt}
+                    buttonText={item.buttonText}
+                    buttonStyles={item.buttonStyles}
+                    buttonHTML={item.buttonHTML}
+                  />
+                ))}
               </div>
             </div>
 
