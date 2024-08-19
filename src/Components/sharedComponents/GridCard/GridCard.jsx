@@ -1,10 +1,19 @@
-
-import { FiCopy } from 'react-icons/fi';
+import { FiCopy } from "react-icons/fi";
+import { useState } from "react";
 
 const GridCard = ({ title, buttonHTML }) => {
+  const [copied, setCopied] = useState(false);
+
   const handleCopy = () => {
-    navigator.clipboard.writeText(buttonHTML);
-    alert('Button code copied to clipboard!');
+    navigator.clipboard
+      .writeText(buttonHTML)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000); // Reset 'copied to copy' state after 2 seconds
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
   };
 
   return (
@@ -21,13 +30,10 @@ const GridCard = ({ title, buttonHTML }) => {
         className="absolute bottom-0 flex items-center justify-center w-full py-2 font-medium text-center border-t cursor-pointer bg-gray-50 hover:bg-gray-100 text-gray-500"
       >
         <FiCopy className="w-5 h-5 mr-1" />
-        <span>Copy</span>
+        <span>{copied ? "Copied!" : "Copy"}</span>
       </div>
     </div>
   );
 };
 
 export default GridCard;
-
-
-
