@@ -4,6 +4,7 @@ import Footer from "../../sharedComponents/Footer/Footer";
 import GridCard from "../../sharedComponents/GridCard/GridCard";
 import CustomParticles from "../../sharedComponents/CustomParticles/CustomParticles";
 import cardimg from "../../../assets/thumb_u.jpg";
+import img1 from "../../../assets/grid/img1.webp"
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -195,14 +196,14 @@ const Home = () => {
                 title="total components"
                 className="absolute top-0 right-0 w-6 h-6 font-bold text-center text-gray-800 bg-white dark:text-white rounded-tr-md rounded-bl-md dark:bg-slate-800"
               >
-                23
+                21
               </div>
 
               <div className="flex justify-center p-2">
                 <a href="#">
                   <img
                     className="rounded-md"
-                    src={cardimg}
+                    src={img1}
                     alt="Card"
                     loading="lazy"
                   />
@@ -215,7 +216,7 @@ const Home = () => {
                     to={"grid"}
                     className="text-xl font-semibold tracking-tight text-white hover:text-primary-800 dark:hover:text-primary-300 dark:text-white"
                   >
-                    Grid
+                    Grid Section
                   </Link>
                 </div>
               </div>
