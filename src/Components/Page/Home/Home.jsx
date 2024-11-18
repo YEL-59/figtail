@@ -3,6 +3,7 @@ import Navbars from "../../sharedComponents/Navbar/navbars";
 import Footer from "../../sharedComponents/Footer/Footer";
 import GridCard from "../../sharedComponents/GridCard/GridCard";
 import CustomParticles from "../../sharedComponents/CustomParticles/CustomParticles";
+import cardimg from "../../../assets/thumb_u.jpg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -126,14 +127,14 @@ const Home = () => {
                 title="total components"
                 className="absolute top-0 right-0 w-6 h-6 font-bold text-center text-gray-800 bg-white dark:text-white rounded-tr-md rounded-bl-md dark:bg-slate-800"
               >
-                239
+                23
               </div>
 
               <div className="flex justify-center p-2">
-                <a href="https://tailwindflex.com/tag/card">
+                <a href="#">
                   <img
                     className="rounded-md"
-                    src="https://tailwindflex.com/storage/thumbnails/user-profile-card-with-cover-image/thumb_u.min.webp?v=1"
+                    src={cardimg}
                     alt="Card"
                     loading="lazy"
                   />
@@ -143,8 +144,8 @@ const Home = () => {
               <div className="px-4 pb-3">
                 <div>
                   <Link
-                    to={'card'}
-                    className="text-xl font-semibold tracking-tight text-gray-900 hover:text-primary-800 dark:hover:text-primary-300 dark:text-white"
+                    to={"card"}
+                    className="text-xl font-semibold tracking-tight text-white hover:text-primary-800 dark:hover:text-primary-300 dark:text-white"
                   >
                     Card
                   </Link>
@@ -182,6 +183,39 @@ const Home = () => {
                     className="text-lg font-semibold tracking-tight text-white hover:text-gray-300"
                   >
                     Button
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div className="relative bg-teal-600 border rounded-lg shadow-md cursor-pointer dark:bg-gray-800 dark:border-gray-700 hover:shadow-primary-400">
+              <div
+                title="total components"
+                className="absolute top-0 right-0 w-6 h-6 font-bold text-center text-gray-800 bg-white dark:text-white rounded-tr-md rounded-bl-md dark:bg-slate-800"
+              >
+                23
+              </div>
+
+              <div className="flex justify-center p-2">
+                <a href="#">
+                  <img
+                    className="rounded-md"
+                    src={cardimg}
+                    alt="Card"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+
+              <div className="px-4 pb-3">
+                <div>
+                  <Link
+                    to={"grid"}
+                    className="text-xl font-semibold tracking-tight text-white hover:text-primary-800 dark:hover:text-primary-300 dark:text-white"
+                  >
+                    Grid
                   </Link>
                 </div>
               </div>

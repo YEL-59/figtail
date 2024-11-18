@@ -28,10 +28,11 @@ const Button = () => {
   return (
     <>
       <div
-        className={`z-20 border  ${navfix
+        className={`z-20 border  ${
+          navfix
             ? " top-0 h-[9%] md:h-[11.5%] lg:h-[8%]  shadow-lg w-full fixed bg-white transition-all duration-300 ease-in-out "
             : ""
-          }`}
+        }`}
       >
         <Navbars className="relative " />
       </div>

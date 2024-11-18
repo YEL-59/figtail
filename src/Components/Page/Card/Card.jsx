@@ -3,7 +3,6 @@ import { useState } from "react";
 import Navbars from "../../sharedComponents/Navbar/navbars";
 import SingleCard from "../../sharedComponents/SingleCard/SingleCard";
 
-
 const CardGallery = () => {
   const [navfix, setNavfix] = useState(false);
 
@@ -126,11 +125,9 @@ const CardGallery = () => {
         </div>
       </section>
 
-
-      
       <div className=" container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <SingleCard
-          img_src='https://tailwindflex.com/storage/thumbnails/user-profile-card-with-cover-image/thumb_u.min.webp?v=1'
+          img_src="https://tailwindflex.com/storage/thumbnails/user-profile-card-with-cover-image/thumb_u.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -180,7 +177,7 @@ const CardGallery = () => {
                  `}
         />
         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/card-grid-section/canvas.min.webp?v=1'
+          img_src="https://tailwindflex.com/storage/thumbnails/card-grid-section/canvas.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -380,12 +377,11 @@ const CardGallery = () => {
 </div>
                    
    
-                 `} />
-        
-
+                 `}
+        />
 
         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/tailwind-image-card-with-text-above-it/thumb_u.min.webp?v=1'
+          img_src="https://tailwindflex.com/storage/thumbnails/tailwind-image-card-with-text-above-it/thumb_u.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -399,9 +395,10 @@ const CardGallery = () => {
 </article>
                    
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/responsive-card-grid/thumb_u.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/responsive-card-grid/thumb_u.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -494,9 +491,10 @@ const CardGallery = () => {
 
                    
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/products-card-grid/canvas.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/products-card-grid/canvas.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -608,9 +606,10 @@ const CardGallery = () => {
     </div>
                    
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/feature-cards-with-icons-on-top/canvas.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/feature-cards-with-icons-on-top/canvas.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -698,9 +697,10 @@ const CardGallery = () => {
 </div>
                    
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/card-grid-for-posts/canvas.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/card-grid-for-posts/canvas.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -869,9 +869,10 @@ const CardGallery = () => {
 </div>
                    
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/card-grid-for-blog-posts-articles/canvas.min.webp?v=3'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/card-grid-for-blog-posts-articles/canvas.min.webp?v=3"
           title="card"
           buttonHTML={`
          
@@ -943,9 +944,10 @@ const CardGallery = () => {
     </li>
 </ul>             
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/fancy-blog-post-card/canvas.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/fancy-blog-post-card/canvas.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -982,9 +984,10 @@ const CardGallery = () => {
 </div>
                    
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/product-card-3/thumb_u.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/product-card-3/thumb_u.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -1044,9 +1047,10 @@ const CardGallery = () => {
 </div>
                    
    
-                 `} />
-                  <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/call-to-action-card-with-image/canvas.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/call-to-action-card-with-image/canvas.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -1077,9 +1081,10 @@ const CardGallery = () => {
 </div>
                    
    
-                 `} />
-                  <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/simple-and-clean-cards/canvas.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/simple-and-clean-cards/canvas.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -1128,9 +1133,10 @@ const CardGallery = () => {
 </div>
                    
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/twitterr-user-twitt-clone/thumb_u.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/twitterr-user-twitt-clone/thumb_u.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -1168,9 +1174,10 @@ const CardGallery = () => {
     </div>
 </div>             
    
-                 `} />
-                  <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/beutiful-post-cards/thumb_u.min.webp?v=5'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/beutiful-post-cards/thumb_u.min.webp?v=5"
           title="card"
           buttonHTML={`
          
@@ -1205,9 +1212,10 @@ const CardGallery = () => {
   </div>
 </div>                 
    
-                 `} />
-                  <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/pricing-section-lima/canvas.min.webp?v=2'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/pricing-section-lima/canvas.min.webp?v=2"
           title="card"
           buttonHTML={`
          
@@ -1355,9 +1363,10 @@ const CardGallery = () => {
     </div>
   </div>             
    
-                 `} />
-                  <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/responsive-cards-with-hover/canvas.min.webp?v=5'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/responsive-cards-with-hover/canvas.min.webp?v=5"
           title="card"
           buttonHTML={`
          
@@ -1449,9 +1458,10 @@ const CardGallery = () => {
     </div>
 </div>            
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/tour-package-card/thumb_u.min.webp?v=3'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/tour-package-card/thumb_u.min.webp?v=3"
           title="card"
           buttonHTML={`
          
@@ -1488,9 +1498,10 @@ const CardGallery = () => {
 </div>
                    
    
-                 `} />
-                  <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/horizontal-post-card-with-image/thumb_u.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/horizontal-post-card-with-image/thumb_u.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -1524,9 +1535,10 @@ const CardGallery = () => {
 
 </div>              
    
-                 `} />
-         <SingleCard
-        img_src='https://tailwindflex.com/storage/thumbnails/info-card-2/thumb_u.min.webp?v=1'
+                 `}
+        />
+        <SingleCard
+          img_src="https://tailwindflex.com/storage/thumbnails/info-card-2/thumb_u.min.webp?v=1"
           title="card"
           buttonHTML={`
          
@@ -1583,11 +1595,8 @@ const CardGallery = () => {
     </div>
 </section>           
    
-                 `} />
-        
-
-
-
+                 `}
+        />
       </div>
     </>
   );
