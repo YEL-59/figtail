@@ -46,21 +46,19 @@ const ComponentCard = ({ component }) => {
           <div className="flex items-center space-x-1">
             <button
               onClick={() => setViewMode("preview")}
-              className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                viewMode === "preview"
+              className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${viewMode === "preview"
                   ? "bg-white text-gray-900 shadow-sm border border-gray-200"
                   : "text-gray-600 hover:text-gray-900"
-              }`}
+                }`}
             >
               Preview
             </button>
             <button
               onClick={() => setViewMode("code")}
-              className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${
-                viewMode === "code"
+              className={`px-3 py-1.5 text-sm font-medium rounded-md transition-colors ${viewMode === "code"
                   ? "bg-white text-gray-900 shadow-sm border border-gray-200"
                   : "text-gray-600 hover:text-gray-900"
-              }`}
+                }`}
             >
               Code
             </button>
@@ -71,21 +69,19 @@ const ComponentCard = ({ component }) => {
               <div className="flex items-center space-x-1">
                 <button
                   onClick={() => setCodeType("jsx")}
-                  className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
-                    codeType === "jsx"
+                  className={`px-2 py-1 text-xs font-medium rounded transition-colors ${codeType === "jsx"
                       ? "bg-blue-100 text-blue-700"
                       : "text-gray-500 hover:text-gray-700"
-                  }`}
+                    }`}
                 >
                   JSX
                 </button>
                 <button
                   onClick={() => setCodeType("html")}
-                  className={`px-2 py-1 text-xs font-medium rounded transition-colors ${
-                    codeType === "html"
+                  className={`px-2 py-1 text-xs font-medium rounded transition-colors ${codeType === "html"
                       ? "bg-blue-100 text-blue-700"
                       : "text-gray-500 hover:text-gray-700"
-                  }`}
+                    }`}
                 >
                   HTML
                 </button>
@@ -117,7 +113,7 @@ const ComponentCard = ({ component }) => {
       {/* Content */}
       <div className="p-6">
         {viewMode === "preview" ? (
-          <div className="flex items-center justify-center min-h-[200px] bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg border-2 border-dashed border-gray-200">
+          <div className="flex items-center justify-center min-h-[200px] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 rounded-lg border border-slate-200/50 shadow-inner">
             <div dangerouslySetInnerHTML={{ __html: component.preview.component }} />
           </div>
         ) : (

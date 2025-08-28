@@ -1,3 +1,7 @@
+// Import additional component categories
+import { moreComponentCategories } from './moreComponents.js';
+import { utilityComponents } from './utilityComponents.js';
+
 // Centralized component library data structure
 export const componentsData = {
   buttons: {
@@ -11,16 +15,16 @@ export const componentsData = {
         description: "Simple primary button with hover effect",
         tags: ["basic", "primary", "hover"],
         preview: {
-          component: `<button className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 font-medium">
-  Click Me
+          component: `<button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+  ✨ Click Me
 </button>`,
         },
         code: {
-          jsx: `<button className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 font-medium">
-  Click Me
+          jsx: `<button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+  ✨ Click Me
 </button>`,
-          html: `<button class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 font-medium">
-  Click Me
+          html: `<button class="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+  ✨ Click Me
 </button>`
         }
       },
@@ -30,16 +34,16 @@ export const componentsData = {
         description: "Button with gradient background and shadow",
         tags: ["gradient", "shadow", "modern"],
         preview: {
-          component: `<button className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 font-medium shadow-lg hover:shadow-xl">
-  Get Started
+          component: `<button className="px-8 py-4 bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white rounded-2xl hover:from-violet-700 hover:via-purple-700 hover:to-fuchsia-700 transition-all duration-300 font-bold shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105">
+  🚀 Get Started
 </button>`,
         },
         code: {
-          jsx: `<button className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 font-medium shadow-lg hover:shadow-xl">
-  Get Started
+          jsx: `<button className="px-8 py-4 bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white rounded-2xl hover:from-violet-700 hover:via-purple-700 hover:to-fuchsia-700 transition-all duration-300 font-bold shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105">
+  🚀 Get Started
 </button>`,
-          html: `<button class="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 font-medium shadow-lg hover:shadow-xl">
-  Get Started
+          html: `<button class="px-8 py-4 bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 text-white rounded-2xl hover:from-violet-700 hover:via-purple-700 hover:to-fuchsia-700 transition-all duration-300 font-bold shadow-2xl hover:shadow-purple-500/25 transform hover:scale-105">
+  🚀 Get Started
 </button>`
         }
       },
@@ -49,16 +53,16 @@ export const componentsData = {
         description: "Button with outline style and fill animation",
         tags: ["outline", "animation", "fill"],
         preview: {
-          component: `<button className="px-6 py-3 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200 font-medium">
-  Learn More
+          component: `<button className="px-8 py-4 border-3 border-emerald-500 text-emerald-600 rounded-xl hover:bg-emerald-500 hover:text-white transition-all duration-300 font-bold shadow-lg hover:shadow-emerald-500/25 transform hover:scale-105">
+  📚 Learn More
 </button>`,
         },
         code: {
-          jsx: `<button className="px-6 py-3 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200 font-medium">
-  Learn More
+          jsx: `<button className="px-8 py-4 border-3 border-emerald-500 text-emerald-600 rounded-xl hover:bg-emerald-500 hover:text-white transition-all duration-300 font-bold shadow-lg hover:shadow-emerald-500/25 transform hover:scale-105">
+  📚 Learn More
 </button>`,
-          html: `<button class="px-6 py-3 border-2 border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200 font-medium">
-  Learn More
+          html: `<button class="px-8 py-4 border-3 border-emerald-500 text-emerald-600 rounded-xl hover:bg-emerald-500 hover:text-white transition-all duration-300 font-bold shadow-lg hover:shadow-emerald-500/25 transform hover:scale-105">
+  📚 Learn More
 </button>`
         }
       },
@@ -68,25 +72,25 @@ export const componentsData = {
         description: "Button with icon and text",
         tags: ["icon", "text", "arrow"],
         preview: {
-          component: `<button className="inline-flex items-center px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium">
-  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          component: `<button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-bold shadow-lg hover:shadow-orange-500/25 transform hover:scale-105">
+  <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
   </svg>
-  Continue
+  ⚡ Continue
 </button>`,
         },
         code: {
-          jsx: `<button className="inline-flex items-center px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium">
-  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          jsx: `<button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-bold shadow-lg hover:shadow-orange-500/25 transform hover:scale-105">
+  <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
   </svg>
-  Continue
+  ⚡ Continue
 </button>`,
-          html: `<button class="inline-flex items-center px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors duration-200 font-medium">
-  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          html: `<button class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-bold shadow-lg hover:shadow-orange-500/25 transform hover:scale-105">
+  <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
   </svg>
-  Continue
+  ⚡ Continue
 </button>`
         }
       },
@@ -146,16 +150,16 @@ export const componentsData = {
         description: "Button with neon glow effect",
         tags: ["neon", "glow", "cyberpunk"],
         preview: {
-          component: `<button className="px-6 py-3 bg-transparent border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_#00ffff] transition-all duration-300 font-medium">
-  Neon Effect
+          component: `<button className="px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-gray-900 hover:shadow-[0_0_30px_#00ffff,0_0_60px_#00ffff] transition-all duration-300 font-bold animate-pulse hover:animate-none">
+  ⚡ NEON POWER
 </button>`,
         },
         code: {
-          jsx: `<button className="px-6 py-3 bg-transparent border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_#00ffff] transition-all duration-300 font-medium">
-  Neon Effect
+          jsx: `<button className="px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-gray-900 hover:shadow-[0_0_30px_#00ffff,0_0_60px_#00ffff] transition-all duration-300 font-bold animate-pulse hover:animate-none">
+  ⚡ NEON POWER
 </button>`,
-          html: `<button class="px-6 py-3 bg-transparent border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_#00ffff] transition-all duration-300 font-medium">
-  Neon Effect
+          html: `<button class="px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 rounded-xl hover:bg-cyan-400 hover:text-gray-900 hover:shadow-[0_0_30px_#00ffff,0_0_60px_#00ffff] transition-all duration-300 font-bold animate-pulse hover:animate-none">
+  ⚡ NEON POWER
 </button>`
         }
       },
@@ -165,22 +169,271 @@ export const componentsData = {
         description: "Circular floating action button with icon",
         tags: ["fab", "floating", "circle", "icon"],
         preview: {
-          component: `<button className="w-14 h-14 bg-red-500 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-200 flex items-center justify-center">
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          component: `<button className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 text-white rounded-full shadow-2xl hover:shadow-pink-500/50 hover:scale-110 transition-all duration-300 flex items-center justify-center group">
+  <svg className="w-7 h-7 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
   </svg>
 </button>`,
         },
         code: {
-          jsx: `<button className="w-14 h-14 bg-red-500 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-200 flex items-center justify-center">
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          jsx: `<button className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 text-white rounded-full shadow-2xl hover:shadow-pink-500/50 hover:scale-110 transition-all duration-300 flex items-center justify-center group">
+  <svg className="w-7 h-7 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
   </svg>
 </button>`,
-          html: `<button class="w-14 h-14 bg-red-500 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-200 flex items-center justify-center">
-  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          html: `<button class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 text-white rounded-full shadow-2xl hover:shadow-pink-500/50 hover:scale-110 transition-all duration-300 flex items-center justify-center group">
+  <svg class="w-7 h-7 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
   </svg>
+</button>`
+        }
+      },
+      {
+        id: "btn-009",
+        name: "Glassmorphism Button",
+        description: "Modern glassmorphism effect with backdrop blur",
+        tags: ["glassmorphism", "modern", "blur", "glass"],
+        preview: {
+          component: `<button className="px-8 py-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-lg border border-white/20 text-gray-800 rounded-2xl hover:from-blue-500/30 hover:to-purple-500/30 transition-all duration-300 font-bold shadow-xl hover:scale-105">
+  ✨ Glass Effect
+</button>`,
+        },
+        code: {
+          jsx: `<button className="px-8 py-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-lg border border-white/20 text-gray-800 rounded-2xl hover:from-blue-500/30 hover:to-purple-500/30 transition-all duration-300 font-bold shadow-xl hover:scale-105">
+  ✨ Glass Effect
+</button>`,
+          html: `<button class="px-8 py-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-lg border border-white/20 text-gray-800 rounded-2xl hover:from-blue-500/30 hover:to-purple-500/30 transition-all duration-300 font-bold shadow-xl hover:scale-105">
+  ✨ Glass Effect
+</button>`
+        }
+      },
+      {
+        id: "btn-010",
+        name: "3D Button",
+        description: "3D button with depth and press animation",
+        tags: ["3d", "depth", "press", "animation"],
+        preview: {
+          component: `<button className="px-8 py-4 bg-gradient-to-b from-yellow-400 to-yellow-500 text-gray-900 rounded-xl font-bold shadow-[0_8px_0_#ca8a04] hover:shadow-[0_6px_0_#ca8a04] hover:translate-y-[2px] active:shadow-[0_4px_0_#ca8a04] active:translate-y-[4px] transition-all duration-150">
+  🎯 3D PRESS
+</button>`,
+        },
+        code: {
+          jsx: `<button className="px-8 py-4 bg-gradient-to-b from-yellow-400 to-yellow-500 text-gray-900 rounded-xl font-bold shadow-[0_8px_0_#ca8a04] hover:shadow-[0_6px_0_#ca8a04] hover:translate-y-[2px] active:shadow-[0_4px_0_#ca8a04] active:translate-y-[4px] transition-all duration-150">
+  🎯 3D PRESS
+</button>`,
+          html: `<button class="px-8 py-4 bg-gradient-to-b from-yellow-400 to-yellow-500 text-gray-900 rounded-xl font-bold shadow-[0_8px_0_#ca8a04] hover:shadow-[0_6px_0_#ca8a04] hover:translate-y-[2px] active:shadow-[0_4px_0_#ca8a04] active:translate-y-[4px] transition-all duration-150">
+  🎯 3D PRESS
+</button>`
+        }
+      },
+      {
+        id: "btn-011",
+        name: "Morphing Button",
+        description: "Button that morphs shape on hover",
+        tags: ["morph", "shape", "transform", "creative"],
+        preview: {
+          component: `<button className="px-8 py-3 bg-purple-500 text-white rounded-full hover:rounded-lg transition-all duration-500 font-medium hover:scale-105 hover:rotate-1">
+  Morph Me
+</button>`,
+        },
+        code: {
+          jsx: `<button className="px-8 py-3 bg-purple-500 text-white rounded-full hover:rounded-lg transition-all duration-500 font-medium hover:scale-105 hover:rotate-1">
+  Morph Me
+</button>`,
+          html: `<button class="px-8 py-3 bg-purple-500 text-white rounded-full hover:rounded-lg transition-all duration-500 font-medium hover:scale-105 hover:rotate-1">
+  Morph Me
+</button>`
+        }
+      },
+      {
+        id: "btn-012",
+        name: "Slide Reveal Button",
+        description: "Button with sliding text reveal effect",
+        tags: ["slide", "reveal", "text", "animation"],
+        preview: {
+          component: `<button className="relative px-6 py-3 bg-gray-900 text-white rounded-lg font-medium overflow-hidden group">
+  <span className="absolute inset-0 bg-blue-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+  <span className="relative z-10 group-hover:text-white transition-colors duration-300">Slide Effect</span>
+</button>`,
+        },
+        code: {
+          jsx: `<button className="relative px-6 py-3 bg-gray-900 text-white rounded-lg font-medium overflow-hidden group">
+  <span className="absolute inset-0 bg-blue-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+  <span className="relative z-10 group-hover:text-white transition-colors duration-300">Slide Effect</span>
+</button>`,
+          html: `<button class="relative px-6 py-3 bg-gray-900 text-white rounded-lg font-medium overflow-hidden group">
+  <span class="absolute inset-0 bg-blue-500 transform translate-x-full group-hover:translate-x-0 transition-transform duration-300"></span>
+  <span class="relative z-10 group-hover:text-white transition-colors duration-300">Slide Effect</span>
+</button>`
+        }
+      },
+      {
+        id: "btn-013",
+        name: "Ripple Effect Button",
+        description: "Button with animated ripple effect",
+        tags: ["ripple", "wave", "animation", "material"],
+        preview: {
+          component: `<button className="relative px-6 py-3 bg-green-500 text-white rounded-lg font-medium overflow-hidden group">
+  <span className="absolute inset-0 w-0 h-0 transition-all duration-300 ease-out bg-white opacity-10 rounded-full group-hover:w-56 group-hover:h-56 group-hover:-top-24 group-hover:-left-24"></span>
+  <span className="relative z-10">Ripple Effect</span>
+</button>`,
+        },
+        code: {
+          jsx: `<button className="relative px-6 py-3 bg-green-500 text-white rounded-lg font-medium overflow-hidden group">
+  <span className="absolute inset-0 w-0 h-0 transition-all duration-300 ease-out bg-white opacity-10 rounded-full group-hover:w-56 group-hover:h-56 group-hover:-top-24 group-hover:-left-24"></span>
+  <span className="relative z-10">Ripple Effect</span>
+</button>`,
+          html: `<button class="relative px-6 py-3 bg-green-500 text-white rounded-lg font-medium overflow-hidden group">
+  <span class="absolute inset-0 w-0 h-0 transition-all duration-300 ease-out bg-white opacity-10 rounded-full group-hover:w-56 group-hover:h-56 group-hover:-top-24 group-hover:-left-24"></span>
+  <span class="relative z-10">Ripple Effect</span>
+</button>`
+        }
+      },
+      {
+        id: "btn-014",
+        name: "Neumorphism Button",
+        description: "Soft UI neumorphism design button",
+        tags: ["neumorphism", "soft", "ui", "modern"],
+        preview: {
+          component: `<button className="px-6 py-3 bg-gray-200 text-gray-800 rounded-2xl font-medium shadow-[inset_-2px_-2px_6px_rgba(255,255,255,0.7),inset_2px_2px_6px_rgba(0,0,0,0.15)] hover:shadow-[inset_2px_2px_6px_rgba(0,0,0,0.15),inset_-2px_-2px_6px_rgba(255,255,255,0.7)] transition-all duration-200">
+  Neomorphism
+</button>`,
+        },
+        code: {
+          jsx: `<button className="px-6 py-3 bg-gray-200 text-gray-800 rounded-2xl font-medium shadow-[inset_-2px_-2px_6px_rgba(255,255,255,0.7),inset_2px_2px_6px_rgba(0,0,0,0.15)] hover:shadow-[inset_2px_2px_6px_rgba(0,0,0,0.15),inset_-2px_-2px_6px_rgba(255,255,255,0.7)] transition-all duration-200">
+  Neomorphism
+</button>`,
+          html: `<button class="px-6 py-3 bg-gray-200 text-gray-800 rounded-2xl font-medium shadow-[inset_-2px_-2px_6px_rgba(255,255,255,0.7),inset_2px_2px_6px_rgba(0,0,0,0.15)] hover:shadow-[inset_2px_2px_6px_rgba(0,0,0,0.15),inset_-2px_-2px_6px_rgba(255,255,255,0.7)] transition-all duration-200">
+  Neomorphism
+</button>`
+        }
+      },
+      {
+        id: "btn-015",
+        name: "Split Button",
+        description: "Button with split hover animation",
+        tags: ["split", "hover", "animation", "creative"],
+        preview: {
+          component: `<button className="relative px-6 py-3 bg-red-500 text-white rounded-lg font-medium overflow-hidden group">
+  <span className="absolute inset-0 bg-red-700"></span>
+  <span className="absolute inset-0 bg-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+  <span className="relative z-10">Split Effect</span>
+</button>`,
+        },
+        code: {
+          jsx: `<button className="relative px-6 py-3 bg-red-500 text-white rounded-lg font-medium overflow-hidden group">
+  <span className="absolute inset-0 bg-red-700"></span>
+  <span className="absolute inset-0 bg-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+  <span className="relative z-10">Split Effect</span>
+</button>`,
+          html: `<button class="relative px-6 py-3 bg-red-500 text-white rounded-lg font-medium overflow-hidden group">
+  <span class="absolute inset-0 bg-red-700"></span>
+  <span class="absolute inset-0 bg-pink-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+  <span class="relative z-10">Split Effect</span>
+</button>`
+        }
+      },
+      {
+        id: "btn-016",
+        name: "Floating Border Button",
+        description: "Button with animated floating border",
+        tags: ["border", "floating", "animation", "outline"],
+        preview: {
+          component: `<button className="relative px-6 py-3 text-blue-600 font-medium bg-transparent border-2 border-transparent rounded-lg group">
+  <span className="absolute inset-0 border-2 border-blue-600 rounded-lg transform scale-105 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300"></span>
+  <span className="relative z-10">Floating Border</span>
+</button>`,
+        },
+        code: {
+          jsx: `<button className="relative px-6 py-3 text-blue-600 font-medium bg-transparent border-2 border-transparent rounded-lg group">
+  <span className="absolute inset-0 border-2 border-blue-600 rounded-lg transform scale-105 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300"></span>
+  <span className="relative z-10">Floating Border</span>
+</button>`,
+          html: `<button class="relative px-6 py-3 text-blue-600 font-medium bg-transparent border-2 border-transparent rounded-lg group">
+  <span class="absolute inset-0 border-2 border-blue-600 rounded-lg transform scale-105 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300"></span>
+  <span class="relative z-10">Floating Border</span>
+</button>`
+        }
+      },
+      {
+        id: "btn-017",
+        name: "Particle Button",
+        description: "Button with particle explosion effect",
+        tags: ["particle", "explosion", "creative", "animation"],
+        preview: {
+          component: `<button className="relative px-6 py-3 bg-yellow-500 text-white rounded-lg font-medium overflow-hidden group">
+  <span className="absolute top-1/2 left-1/2 w-0 h-0 transition-all duration-500 ease-out bg-yellow-300 rounded-full group-hover:w-72 group-hover:h-72 transform -translate-x-1/2 -translate-y-1/2 opacity-20"></span>
+  <span className="relative z-10">Particle Burst</span>
+</button>`,
+        },
+        code: {
+          jsx: `<button className="relative px-6 py-3 bg-yellow-500 text-white rounded-lg font-medium overflow-hidden group">
+  <span className="absolute top-1/2 left-1/2 w-0 h-0 transition-all duration-500 ease-out bg-yellow-300 rounded-full group-hover:w-72 group-hover:h-72 transform -translate-x-1/2 -translate-y-1/2 opacity-20"></span>
+  <span className="relative z-10">Particle Burst</span>
+</button>`,
+          html: `<button class="relative px-6 py-3 bg-yellow-500 text-white rounded-lg font-medium overflow-hidden group">
+  <span class="absolute top-1/2 left-1/2 w-0 h-0 transition-all duration-500 ease-out bg-yellow-300 rounded-full group-hover:w-72 group-hover:h-72 transform -translate-x-1/2 -translate-y-1/2 opacity-20"></span>
+  <span class="relative z-10">Particle Burst</span>
+</button>`
+        }
+      },
+      {
+        id: "btn-018",
+        name: "Squeeze Button",
+        description: "Button with squeeze and expand animation",
+        tags: ["squeeze", "expand", "animation", "playful"],
+        preview: {
+          component: `<button className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:scale-95 active:scale-90 transition-transform duration-150 hover:bg-purple-700">
+  Squeeze Me
+</button>`,
+        },
+        code: {
+          jsx: `<button className="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:scale-95 active:scale-90 transition-transform duration-150 hover:bg-purple-700">
+  Squeeze Me
+</button>`,
+          html: `<button class="px-6 py-3 bg-purple-600 text-white rounded-lg font-medium hover:scale-95 active:scale-90 transition-transform duration-150 hover:bg-purple-700">
+  Squeeze Me
+</button>`
+        }
+      },
+      {
+        id: "btn-019",
+        name: "Wobble Button",
+        description: "Button with wobble animation on hover",
+        tags: ["wobble", "shake", "animation", "fun"],
+        preview: {
+          component: `<button className="px-6 py-3 bg-pink-500 text-white rounded-lg font-medium hover:animate-bounce transition-all duration-200 hover:bg-pink-600">
+  Wobble Effect
+</button>`,
+        },
+        code: {
+          jsx: `<button className="px-6 py-3 bg-pink-500 text-white rounded-lg font-medium hover:animate-bounce transition-all duration-200 hover:bg-pink-600">
+  Wobble Effect
+</button>`,
+          html: `<button class="px-6 py-3 bg-pink-500 text-white rounded-lg font-medium hover:animate-bounce transition-all duration-200 hover:bg-pink-600">
+  Wobble Effect
+</button>`
+        }
+      },
+      {
+        id: "btn-020",
+        name: "Magnetic Button",
+        description: "Button with magnetic pull effect",
+        tags: ["magnetic", "pull", "interactive", "modern"],
+        preview: {
+          component: `<button className="relative px-8 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-2xl font-bold transform transition-all duration-300 hover:scale-115 hover:rotate-6 hover:shadow-2xl shadow-lg group">
+  <span className="absolute inset-0 bg-gradient-to-r from-pink-600 via-red-600 to-orange-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+  <span className="relative z-10">🧲 MAGNETIC FORCE</span>
+</button>`,
+        },
+        code: {
+          jsx: `<button className="relative px-8 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-2xl font-bold transform transition-all duration-300 hover:scale-115 hover:rotate-6 hover:shadow-2xl shadow-lg group">
+  <span className="absolute inset-0 bg-gradient-to-r from-pink-600 via-red-600 to-orange-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+  <span className="relative z-10">🧲 MAGNETIC FORCE</span>
+</button>`,
+          html: `<button class="relative px-8 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-2xl font-bold transform transition-all duration-300 hover:scale-115 hover:rotate-6 hover:shadow-2xl shadow-lg group">
+  <span class="absolute inset-0 bg-gradient-to-r from-pink-600 via-red-600 to-orange-600 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+  <span class="relative z-10">🧲 MAGNETIC FORCE</span>
 </button>`
         }
       }
@@ -948,7 +1201,10 @@ export const componentsData = {
         }
       }
     ]
-  }
+  },
+  // Merge additional component categories
+  ...moreComponentCategories,
+  ...utilityComponents
 };
 
 // Helper function to get all components
