@@ -3,7 +3,7 @@ import Navbars from "../../sharedComponents/Navbar/navbars";
 import Footer from "../../sharedComponents/Footer/Footer";
 import ComponentLibrary from "../../sharedComponents/ComponentLibrary/ComponentLibrary";
 
-const Button = () => {
+const Layout = () => {
   const [navfix, setNavfix] = useState(false);
 
   function setFixed() {
@@ -28,7 +28,7 @@ const Button = () => {
       </div>
 
       <div className="bg-gray-50 min-h-screen">
-        <ComponentLibrary categoryFilter="buttons" />
+        <ComponentLibrary categoryFilter="layouts" />
       </div>
 
       <section>
@@ -38,4 +38,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default Layout;
